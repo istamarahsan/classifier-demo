@@ -29,7 +29,7 @@ class MultilabelClassifier(ABC):
     ]
 
     @abstractmethod
-    def predict_labels(self, content: str) -> list[LabelModelOutput]:
+    def predict_labels(self, content: str):
         pass
 
 
@@ -37,7 +37,7 @@ class RandomClassifier(MultilabelClassifier):
     def __init__(self):
         self.label_names = self.labels
 
-    def predict_labels(self, content: str) -> list[LabelModelOutput]:
+    def predict_labels(self, content: str):
         return [LabelModelOutput(label_name, random.random())
                 for label_name
                 in self.label_names]

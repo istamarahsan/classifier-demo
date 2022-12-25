@@ -19,8 +19,8 @@ def handle_request():
         return render_template('home.html')
 
     text: str = request.form.get("textf")
-    results: list[LabelModelOutput] = model.predict_labels(text)
-    display: list[LabelDisplayDetails] = [LabelDisplayDetails(result) for result in results]
+    results = model.predict_labels(text)
+    display = [LabelDisplayDetails(result) for result in results]
 
     return render_template("result.html", labels=display)
 
