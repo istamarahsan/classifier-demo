@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, render_template
 from Middleware.classifiers import *
 from Models.app_models import LabelDisplayDetails
@@ -24,4 +26,4 @@ def handle_request():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=os.getenv("PORT", default=5000))
