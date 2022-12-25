@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+.back{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.cont{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 140px;
+    padding: 0 32px;
+}
+
+.image{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image .peep1{
+    display: none;
+}
+
+.image .peep2{
+    width: 450px;
+    position: fixed;
+    height: 100%;
+    left: 1;
+    bottom: 0;
+    
+    z-index: -1; 
+}
+
+
+.right{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.right .cont1{
+    /* width: 400px; */
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px
+}
+
+.right .main{
+    margin-top: 80px;
+    color: black;
+    text-align: left;
+}
+
+.right .main h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.right .main hr{
+    border: 1.5px solid #0f9180;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width:1250px){
+    .cont{
+        grid-gap: 70px;
+
+    }
+}
+
+@media screen and (max-width:1100px){
+    .image .peep2{
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width:1050px){
+    .image{
+        display: none;
+    }
+
+    /* .back{
+        display: none;
+    } */
+
+    .cont{
+        grid-template-columns: 1fr;
+    }
+
+    .right{
+        justify-content: center;
+    }
+}
+
+
+/* percentage bars */
+.labels{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.title{
+    display: block;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.label-bar{
+    width: 100%;
+    height: 20px;
+
+    border-radius: 100px;
+    background: #b6d7f69a;
+
+    margin-top: 8px;
+
+}
+
+.label-percentage{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: block;
+
+    background-color: #0371a4;
+    border-radius: 100px;
+
+    animation: progress 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+.label-percentage.ai1{
+    width: 90%;
+}
+
+.label-percentage.ai2{
+    width: 85%;
+}
+
+
+.label-percentage.ai3{
+    width: 100%;
+}
+
+.label-percentage.ai4{
+    width: 95%;
+}
+
+.label-percentage.ai5{
+    width: 90%;
+}
+
+.label-percentage.ai6{
+    width: 70%;
+}
+
+
+.label-percentage.ai7{
+    width: 50%;
+}
+
+.label-percentage.ai8{
+    width: 55%;
+}
+
+
+.label-percentage.ai9{
+    width: 60%;
+}
+
+.label-percentage.ai10{
+    width: 10%;
+}
+
+
+.label-percentage.ai11{
+    width: 5%;
+}
+
+.label-percentage.ai12{
+    width: 5%;
+}
+
+.label-percentage.ai13{
+    width: 15%;
+}
+
+.label-percentage.ai14{
+    width: 90%;
+}
+
+
+.label-percentage.ai15{
+    width: 100%;
+}
+
+.label-percentage.ai16{
+    width: 100%;
+}
+
+.label-percentage.ai17{
+    width: 2%;
+}
+
+.label-percentage.ai18{
+    width: 40%;
+}
+
+
+.label-percentage.ai19{
+    width: 45%;
+}
+
+.label-percentage.ai20{
+    width: 50%;
+}
+
+.label-percentage.ai21{
+    width: 18%;
+}
+
+
+.label-percentage .num{
+    position: absolute;
+    left: 420px;
+    /* padding-right: 10px; */
+    margin-top: -28px;
+
+
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+

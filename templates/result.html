@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <!--CSS External Link-->
+    <link rel="stylesheet" href="/static/result.css">
+ 
+    <!--Font Link (Poppins and)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="/static/result.js"></script>
+
+</head>
+
+<body>
+    <img src="/static/images/back0.png" alt="" class="back">
+    <div class="cont">
+        <div class="image">
+            <img class="peep1" src="/static/images/peep.svg" alt="">
+            <img class="peep2" src="/static/images/peep2.svg" alt="">
+        </div>
+
+        <div class="right">
+            <div class="cont1">
+                <section class="main">
+                    <h2>Results</h2>
+                    <hr>
+                </section>
+
+                <div class="labels">
+                    {% for label in labels %}
+                        <span class="title">{{ label.name }}</span>
+                        <div class="label-bar">
+                            <span class="label-percentage">
+                                <span class="num">{{ label.percentage_str }}</span>
+                            </span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
