@@ -18,7 +18,7 @@ def handle_request():
     if request.method != 'POST':
         return render_template('home.html')
 
-    text: str = request.form.get("textf")
+    text = request.form.get("textf")
     results = model.predict_labels(text)
     display = [LabelDisplayDetails(result) for result in results]
 
