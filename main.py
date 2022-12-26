@@ -1,8 +1,8 @@
 import os
 
 from flask import Flask, request, render_template
-from Middleware.classifiers import *
-from Models.app_models import LabelDisplayDetails
+from middleware.classifiers import *
+from models.app import LabelDisplayDetails
 
 app = Flask(__name__)
 model = RandomClassifier()

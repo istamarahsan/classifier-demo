@@ -1,4 +1,4 @@
-from Models.ml_models import LabelModelOutput
+from models.ml import LabelModelOutput
 
 
 class LabelDisplayDetails:

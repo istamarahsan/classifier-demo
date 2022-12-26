@@ -1,6 +1,6 @@
 import random
 from abc import ABC, abstractmethod
-from Models.ml_models import LabelModelOutput
+from models.ml import LabelModelOutput
 
 
 class MultilabelClassifier(ABC):
