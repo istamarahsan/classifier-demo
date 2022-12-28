@@ -8,7 +8,7 @@
     <!--CSS External Link-->
     <link rel="stylesheet" href="/static/result.css">
  
-    <!--Font Link (Poppins and)-->
+    <!--Font Link (Poppins)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -18,12 +18,20 @@
 
 <body>
     <img src="/static/images/back0.png" alt="" class="back">
+
+
+
     <div class="cont">
         <div class="image">
+            <!-- back button-->
+            <a href="{{ url_for('home') }}" class="arrow left"><div></div></a>
+
+            <!-- image -->
             <img class="peep1" src="/static/images/peep.svg" alt="">
             <img class="peep2" src="/static/images/peep2.svg" alt="">
         </div>
 
+       
         <div class="right">
             <div class="cont1">
                 <section class="main">

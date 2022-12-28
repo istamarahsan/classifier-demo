@@ -92,7 +92,7 @@
 
 
 @media screen and (max-width:1050px){
-    .image{
+    .image .peep2{
         display: none;
     }
 
@@ -269,3 +269,45 @@
 }
 
 
+
+/* back button */
+.arrow{
+    cursor: pointer;
+
+    /* position: relative; */
+    background: white;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    margin: 40px 60px;
+    
+}
+
+.arrow:hover{
+    box-shadow: 0px 0px 15px 5px #01927e;
+}
+
+.arrow div{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+
+    border-top: 4px solid #00BFA6;
+    border-left: 4px solid #00BFA6;
+
+    transform: rotate(45deg);
+    left: 15px;
+    top: 20px;
+}
+
+.left{
+    transform: rotate(-90deg);
+}
