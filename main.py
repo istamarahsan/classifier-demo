@@ -8,12 +8,12 @@ app = Flask(__name__)
 model = RandomClassifier()
 
 
-@app.route('/', methods=['GET'])
+@app.get('/')
 def home():
     return render_template('home.html')
 
 
-@app.route('/', methods=['POST'])
+@app.post('/')
 def handle_request():
     if request.method != 'POST':
         return render_template('home.html')
