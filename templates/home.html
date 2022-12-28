@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!--CSS External Link-->
-    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='home.css') }}>
  
     <!--Font Link (Poppins)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +18,11 @@
 
 <body>
 
-    <img src="/static/images/back0.png" alt="" class="back">
+    <img src={{ url_for('static', filename='images/back0.png') }} alt="" class="back">
     <div class="cont">
         <!-- left -->
         <div class="image">
-            <img src="/static/images/peep.svg" alt="">
+            <img src={{ url_for('static', filename='images/peep.svg') }} alt="">
         </div>
         <!-- right -->
         <div class="right">

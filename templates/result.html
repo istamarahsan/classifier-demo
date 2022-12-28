@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
     <!--CSS External Link-->
-    <link rel="stylesheet" href="/static/result.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='result.css') }}>
  
     <!--Font Link (Poppins)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <script src="/static/result.js"></script>
+    <script src={{ url_for('static', filename='result.js') }}></script>
 
 </head>
 
 <body>
-    <img src="/static/images/back0.png" alt="" class="back">
+    <img src={{ url_for('static', filename='images/back0.png') }} alt="" class="back">
 
 
 
@@ -27,8 +27,8 @@
             <a href="{{ url_for('home') }}" class="arrow left"><div></div></a>
 
             <!-- image -->
-            <img class="peep1" src="/static/images/peep.svg" alt="">
-            <img class="peep2" src="/static/images/peep2.svg" alt="">
+            <img class="peep1" src={{ url_for('static', filename='images/peep.svg') }} alt="">
+            <img class="peep2" src={{ url_for('static', filename='images/peep2.svg') }} alt="">
         </div>
 
        
