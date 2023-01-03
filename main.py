@@ -1,11 +1,18 @@
 import os
 
-from flask import Flask, request, render_template
+import flask
+from flask import Flask, request, render_template, url_for
 from middleware.classifiers import *
 from models.app import LabelDisplayDetails
 
 app = Flask(__name__)
-model = RandomClassifier()
+model = MLClassifier(
+    ml.ml.load_model(
+        model_path='static/ml/classifier_state_dict.bin',
+        vocabulary_path='static/ml/vocabulary.bin',
+        labelrefs_path='static/ml/labels.json'
+    )
+)
 
 
 @app.get('/')
