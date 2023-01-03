@@ -4,5 +4,3 @@ gunicorn==20.1.0
 itsdangerous==2.0.1
 jinja2==3.1.2
 werkzeug==2.0.3
-torch==1.12.1
-transformers==4.24.0

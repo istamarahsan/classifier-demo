@@ -1,7 +1,5 @@
 import random
 from abc import ABC, abstractmethod
-
-import ml.ml
 from models.ml import LabelModelOutput
 
 
@@ -43,13 +41,3 @@ class RandomClassifier(MultilabelClassifier):
         return [LabelModelOutput(label_name, random.random())
                 for label_name
                 in self.label_names]
-
-
-class MLClassifier(MultilabelClassifier):
-    def __init__(self, model: ml.ml.CourseLabelClassifier):
-        self.model = model
-
-    def predict_labels(self, content: str) -> list[LabelModelOutput]:
-        return [LabelModelOutput(name, value)
-                for name, value
-                in self.model.predict(content)]
