@@ -15,6 +15,8 @@ app = Flask(__name__)
 ml_state_present = os.path.isfile(ML_STATE_PATH)
 labelrefs_present = os.path.isfile(LABELREFS_PATH)
 vocab_present = os.path.isfile(VOCAB_PATH)
+if not os.path.isdir(STATIC_ML_DIR):
+    os.makedirs(STATIC_ML_DIR)
 
 if not ml_state_present:
     url = os.getenv('ML_STATE_URL')
