@@ -4,9 +4,11 @@ from flask import Flask, request, render_template
 from middleware.classifiers import *
 from models.app import LabelDisplayDetails
 
-ML_STATE_PATH = 'static/ml/classifier_state_dict.bin'
-LABELREFS_PATH = 'static/ml/labels.json'
-VOCAB_PATH = 'static/ml/vocabulary.bin'
+ROOT_DIR = os.path.realpath(os.path.dirname(__file__))
+STATIC_ML_DIR = os.path.join(ROOT_DIR, 'static', 'ml')
+ML_STATE_PATH = os.path.join(STATIC_ML_DIR, 'classifier_state_dict.bin')
+LABELREFS_PATH = os.path.join(STATIC_ML_DIR, 'labels.json')
+VOCAB_PATH = os.path.join(STATIC_ML_DIR, 'vocabulary.bin')
 
 app = Flask(__name__)
 
